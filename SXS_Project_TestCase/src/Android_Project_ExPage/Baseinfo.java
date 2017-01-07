@@ -1,0 +1,102 @@
+package Android_Project_ExPage;
+
+public class Baseinfo
+{
+
+    public static final String AndroidDriverURL = "http://192.168.1.175:4723/wd/hub";
+
+    public static final String AndroidDriverName = "192.168.56.101:5555";
+
+    public static final String AndroidappPackage = "com.sxsfinance.SXS";
+
+    public static final String AndroidappActivity = "com.sxsfinance.SXS.actvity.main.GuidepageActivity";
+    public static final String AndroidplatformVersion = "4.3";
+
+    public static final String AndroidappDir = "sxs_android_v1.2.4_2016-12-22.apk";
+
+
+    public static final String Mymoney = "SELECT vault_user_money.mymoney FROM vault_user_money,vault_user WHERE vault_user.id = vault_user_money.user_id AND moblie = '17301216033'";
+    public static final String Lockmoney = "SELECT vault_user_money.lockmoney from vault_user_money,vault_user WHERE vault_user.id = vault_user_money.user_id AND  moblie ='17301216033'";
+
+    //定期计划总额=定期收益总额+定期投资总额
+    //定期收益总额
+    public static final String Dq_earnings = "SELECT sum(vault_user_dq_gains.earnings) total FROM vault_user_dq_gains,vault_user WHERE vault_user.id=vault_user_dq_gains.user_id AND moblie = '17301216033'";
+    //定期投资总额
+    public static final String Dq_Inmoney = "SELECT sum(vault_user_dq_log.in_money) amy FROM vault_user_dq_log,vault_user WHERE vault_user_dq_log.user_id = vault_user.id AND moblie = '17301216033'";
+    //活期计划总额
+    //活期收益总额
+
+    //活期投资总额
+
+    //************************登录页面操作所需值************************
+    public static final String LoginTelephoneNumber = "17301216444";
+    public static final String LoginWrongTelephoneNumber = "17301216000";
+    public static final String LoginNullTelephoneNumber = "";
+    public static final String LoginNullPassWord = "";
+    public static final String LoginLongWrongPassWord = "qqqqqqq";
+    public static final String LoginPassWord = "qqqqqq";
+    public static final String AssLoginPageByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216444'";
+
+    public static final String RechargeInputMoney = "10";
+
+    public static final String GetVerifyByFindPayPW = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17301216444' ORDER BY id DESC LIMIT 1;";
+    //************************************************************************************************
+
+    public static final String SqlUrl = "jdbc:mysql://123.57.72.212:8301/sxs_vault";
+    public static final String User = "test";
+    public static final String Password = "mysqltest2016";
+
+    //************************修改登录密码页面操作所需值（ChangeLoginPWPage）************************
+    public static final String ChangeLoginPWTelephoneNumber = "17301216444";
+    public static final String ChangeLoginPWPassWord = "123456";
+    public static final String ChangeLoginPWNewPW = "qqqqqq";
+    public static final String ChangeLoginPWNewPWAgain = "qqqqqq";
+    public static final String AssChangeLoginPWByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216444'";
+
+    //*******************************注册页面操作所需值*******************************
+    public static final String RegisterTelephoneNumber = "17600110006";
+    public static final String RegisterWrongTelephoneNumber = "1730121600";
+    public static final String RegisterNullTelephoneNumber = "";
+    public static final String RegisterNullVerifyCode = "";
+    public static final String RegisterWrongVerifyCode = "123456";
+    public static final String RegisterPassword = "qqqqqq";
+    public static final String RegisterAgainPassword = "qqqqqq";
+    public static final String GetVerifyByRegister = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17600110006' ORDER BY id DESC LIMIT 1;";
+    //************************************************************************************************
+
+    //************************身份证实名操作页面所需值************************
+
+    public static final String IdentityAuthenticationUsername = "宋培东";
+    public static final String IdentityAuthenticationNumber = "411122199309258133";
+    //************************************************************************************************
+
+    //************************忘记密码页面操作所需值************************
+    public static final String ForgotPasswordTelephone = "17301216444";
+    public static final String ForgotPasswordNewPassword = "qqqqqq";
+    public static final String ForgotPasswordAgainPassword = "qqqqqq";
+    public static final String GetVerifyByForgetPW = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17301216444' ORDER BY id DESC LIMIT 1;";
+    //************************************************************************************************
+
+    public static final String InvestMoneyByXS = "100";
+    public static final String InvestMoneyBySF = "1000";
+    public static final String LostByHistoryMoney = "1";
+
+    //************************更改绑定手机号页面操作所需值（ChangeBildingPage）************************
+    public static final String ChangeBildingTelephone = "17301216004";
+    public static final String GetVerifyByBildingPageOne = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17301216004' ORDER BY id DESC LIMIT 1;";
+    public static final String ChangeBildingPassword = "qqqqqq";
+    public static final String ChangeBildingNewTelephone = "17301216444";
+    public static final String GetVerifyByBildingPageTwo = "SELECT verify FROM vault_user_moblie_verify WHERE moblie='17301216444' ORDER BY id DESC LIMIT 1;";
+    public static final String AssChangeBildingByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216004'";
+    //************************************************************************************************
+
+    //***********************首页投资页面操作所需值***********************
+    public static final String InvestTelephone = "17301216444";
+    public static final String InvestPassword = "qqqqqq";
+    public static final String InvestMoney = "1000";
+    public static final String AssInvestByInUseID = "SELECT vault_user_auth.inuse FROM vault_user_auth,vault_user WHERE vault_user.id=vault_user_auth.user_id AND moblie='17301216444'";
+
+    //************************************************************************************************
+
+
+}
